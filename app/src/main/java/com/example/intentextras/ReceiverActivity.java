@@ -17,6 +17,19 @@ public class ReceiverActivity extends AppCompatActivity {
         setContentView(R.layout.activity_receiver);
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+        tvName=findViewById(R.id.tvName);
+        tvAge=findViewById(R.id.tvAge);
+        String savedExtra = getIntent().getStringExtra("value1");
+        tvName.setText(savedExtra);
+        int savedExtraNumber = getIntent().getIntExtra("value2",1);
+        tvAge.setText(savedExtraNumber);
+
+//    @Override
+//    protected void onCreate(Bundle savedInstanceState) {
+//        super.onCreate(savedInstanceState);
+//        setContentView(R.layout.activity_receiver);
+//        Toolbar toolbar = findViewById(R.id.toolbar);
+//        setSupportActionBar(toolbar);
 
         FloatingActionButton fab = findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
